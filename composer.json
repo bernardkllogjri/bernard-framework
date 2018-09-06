@@ -1,0 +1,17 @@
+{
+    "name": "Bernard/Framework",
+    "authors": [
+        {
+            "name": "Bernard Kllogjri",
+            "email": "bernard.kllogjri@softlab.al"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.5"
+    },
+    "autoload":{
+        "classmap":[
+            "./"
+        ]
+    }
+}
