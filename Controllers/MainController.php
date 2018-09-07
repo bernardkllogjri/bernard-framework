@@ -4,13 +4,6 @@ class MainController{
 
     use Session;
     use Connection;
-
-    protected $user = [
-        'name' => '',
-        'e-mail' => '',
-        'phone' => ''
-    ];
-    protected $errors = [];
     protected $connection = null;
 
     public function __construct()
@@ -26,6 +19,6 @@ class MainController{
 
 
     public function index(){
-         require('../views/home.view.php');
+        return view('home');
     }
 }

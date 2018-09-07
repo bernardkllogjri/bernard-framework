@@ -12,9 +12,9 @@ trait Session{
         ');
         if($st->execute()){
             $users = $st->fetchAll(PDO::FETCH_OBJ);
-            return require("../views/{$this->after_login_page}.view.php");
+            return view($this->after_login_page);
         }else{
-            $this->view();
+            return $this->index();
         }
     }
 

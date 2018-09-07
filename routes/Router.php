@@ -1,10 +1,9 @@
 <?php
-
 error_reporting(0);
 
-$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-$dotenv->load();
+(new Dotenv\Dotenv(dirname(__DIR__)))->load();
 error_reporting($_ENV['ERR_REPORTING']);
+require ('../config/helpers.php');
 
 
 class Router{
@@ -47,6 +46,6 @@ class Router{
 
         }
 
-        return require '../views/404.php';
+        return view('404');
     }
 }
