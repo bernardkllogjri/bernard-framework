@@ -1,5 +1,4 @@
 <?php
 
-require '../vendor/autoload.php';
-
-return Router::handleTraffic();
+  require '../core/bootstrap.php';
+  return Router\Router::handleTraffic();

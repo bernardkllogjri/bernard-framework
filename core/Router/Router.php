@@ -1,17 +1,11 @@
 <?php
-error_reporting(0);
 
-(new Dotenv\Dotenv(dirname(__DIR__)))->load();
-error_reporting($_ENV['ERR_REPORTING']);
-require ('../config/helpers.php');
-
+namespace Router;
 
 class Router{
-    protected static $routes;
+    protected static $routes = [];
 
     public static function handleTraffic(){
-
-        self::$routes = require '../routes/web.php';
 
         $compounds = explode('/',$_SERVER['REQUEST_URI']);
 
@@ -21,9 +15,8 @@ class Router{
         }
 
         $uri = '/'.implode('/',$compounds);
-
         if(!isset(self::$routes[$uri])){
-            return require '../views/404.php';
+            return view('404');
         }
 
         $route = self::$routes[$uri];
@@ -33,11 +26,10 @@ class Router{
                 return $route();
             }
 
-            $class = explode('@',$route)[0];
-            $controller = '../Controllers/'.$class.'.php';
+            $class = 'Controllers\\'.explode('@',$route)[0];
             $method = explode('@',$route)[1];
 
-            if(file_exists($controller)){
+            if(class_exists($class)){
                 $object = (new $class);
                 if(method_exists($object,$method)){
                     return $object->{$method}();
@@ -47,5 +39,9 @@ class Router{
         }
 
         return view('404');
+    }
+
+    public static function register(string $routeName, $callback){
+        static::$routes[$routeName] = $callback;
     }
 }

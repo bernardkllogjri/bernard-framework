@@ -1,4 +1,5 @@
 <?php
+namespace Traits;
 
 trait Session{
     protected $logeddin;

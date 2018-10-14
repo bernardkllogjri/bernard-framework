@@ -1,4 +1,7 @@
 <?php
+namespace Traits;
+use PDO;
+
 trait Connection{
 
     public static function make(){
