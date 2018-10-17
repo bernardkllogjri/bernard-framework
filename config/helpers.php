@@ -4,7 +4,7 @@
   }
 
   function view($view){
-    require("../views/{$view}.view.php");
+    require("../resources/views/{$view}.view.php");
   }
 
   function config($key){
