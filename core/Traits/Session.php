@@ -1,6 +1,8 @@
 <?php
 namespace Traits;
 
+use DB;
+
 trait Session{
     protected $logeddin;
     protected $login_url = '/admin';
@@ -8,15 +10,13 @@ trait Session{
 
 
     public function home(){
-        $st = $this->connection->prepare('
-            SELECT name,email,phone FROM users WHERE admin = 0
-        ');
-        if($st->execute()){
-            $users = $st->fetchAll(PDO::FETCH_OBJ);
+
+        $users = DB::raw('SELECT name,email,phone FROM users WHERE admin = 0');
+
+        if($users) {
             return view($this->after_login_page);
-        }else{
-            return $this->index();
         }
+        return $this->index();
     }
 
     public function dashboard(){
@@ -32,17 +32,13 @@ trait Session{
             $errors = $_SESSION['login_error'];
             unset($_SESSION['login_error']);
         }
-        return require('../views/login.view.php');
+        return view('login');
     }
 
     public function login(){
-        $st = $this->connection->prepare(
-            'SELECT * FROM users WHERE email = :email limit 1'
-        );
-        $st->execute([
-            'email' => $_POST['email'],
+        $user = DB::raw('SELECT * FROM users WHERE email = :email limit 1', [
+            'email' => $_POST['email']
         ]);
-        $user = $st->fetch(PDO::FETCH_OBJ);
 
 
         if(password_verify($_POST['password'],$user->password)){

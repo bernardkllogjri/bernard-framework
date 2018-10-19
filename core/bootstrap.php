@@ -3,7 +3,7 @@
   error_reporting(0);
 
   require '../vendor/autoload.php';
-  require '../config/helpers.php';
+  require 'helpers.php';
   require '../config/site.php';
   require '../routes/web.php';
 
