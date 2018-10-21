@@ -1,7 +1,8 @@
 <?php
-    return [
-        '/' => 'MainController@index',
-        '/test' => function(){
-            die(var_dump('It Works!'));
-        }
-    ];
+
+use \Router\Router as Route;
+
+Route::get('/','MainController@index');
+Route::get('/test',function(){
+    dd('It Works!');
+});
