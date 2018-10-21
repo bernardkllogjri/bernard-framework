@@ -2,7 +2,7 @@
 
 use \Router\Router as Route;
 
-Route::register('/','MainController@index');
-Route::register('/test',function(){
+Route::get('/','MainController@index');
+Route::get('/test',function(){
     dd('It Works!');
 });

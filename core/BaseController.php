@@ -2,21 +2,18 @@
 
 namespace Core;
 use DB;
-use Traits\{Session, Connection};
+use Traits\{Connection, Session};
 
 class BaseController{
+    public $login_url = 'admin';
+    public $after_login = 'dashboard';
+    protected $login_page = 'admin.login';
 
+    use Connection;
     use Session;
 
     public function __construct(){
         DB::init(Connection::make());
-
-        if($_SESSION['user']){
-            $this->logeddin = true;
-        }else{
-            $this->logeddin = false;
-        }
         session_start();
-
     }
 }
