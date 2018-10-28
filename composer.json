@@ -13,7 +13,7 @@
     "minimum-stability": "alpha",
 
     "require": {
-        "bernardkllogjri/framesource": "^1.02",
+        "bernardkllogjri/framesource": "^0.1",
         "vlucas/phpdotenv": "^2.5"
     },
 
