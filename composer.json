@@ -1,13 +1,16 @@
 {
     "name": "bernardkllogjri/framelab",
+    "description": "Ultra lightweight php framework",
+    "type": "project",
     "authors": [
         {
             "name": "Bernard Kllogjri",
             "email": "bernard@kllogjri.com"
         }
     ],
+    "minimum-stability": "alpha",
     "require": {
-        "vlucas/phpdotenv": "^2.5"
+        "bernardkllogjri/framesource": "^2.5"
     },
     "autoload":{
         "classmap":[
