@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Core\BaseController;
+use FrameLab\BaseController;
 
 class MainController extends BaseController{
 

@@ -4,32 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a87a3aa7fddd434164cbbaf3e675e71",
+    "content-hash": "2d6fb0a08034fe9fba6e2f098eb6fd0c",
     "packages": [
         {
             "name": "bernardkllogjri/framesource",
-            "version": "1.01",
+            "version": "1.02",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bernardkllogjri/frameSource.git",
-                "reference": "b21f46d8dae1152a1511048d7bb12c3f1c9a5178"
+                "reference": "3bbf22274e82cd9b9a4ef89e158219d1f72bd470"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bernardkllogjri/frameSource/zipball/b21f46d8dae1152a1511048d7bb12c3f1c9a5178",
-                "reference": "b21f46d8dae1152a1511048d7bb12c3f1c9a5178",
+                "url": "https://api.github.com/repos/bernardkllogjri/frameSource/zipball/3bbf22274e82cd9b9a4ef89e158219d1f72bd470",
+                "reference": "3bbf22274e82cd9b9a4ef89e158219d1f72bd470",
                 "shasum": ""
             },
             "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./src"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Bernard Kllogjri",
-                    "email": "bernard@kllogjri.com"
+                    "email": "bernard@kllogjri.com",
+                    "homepage": "http://www.kllogjri.com"
                 }
             ],
             "description": "Source code for frameLab",
-            "time": "2018-10-28T12:59:27+00:00"
+            "time": "2018-10-28T13:40:02+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
