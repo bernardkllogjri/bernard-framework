@@ -4,8 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64633cc2f1ea57399f44c676a6d6be80",
+    "content-hash": "9a87a3aa7fddd434164cbbaf3e675e71",
     "packages": [
+        {
+            "name": "bernardkllogjri/framesource",
+            "version": "1.01",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bernardkllogjri/frameSource.git",
+                "reference": "b21f46d8dae1152a1511048d7bb12c3f1c9a5178"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bernardkllogjri/frameSource/zipball/b21f46d8dae1152a1511048d7bb12c3f1c9a5178",
+                "reference": "b21f46d8dae1152a1511048d7bb12c3f1c9a5178",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Bernard Kllogjri",
+                    "email": "bernard@kllogjri.com"
+                }
+            ],
+            "description": "Source code for frameLab",
+            "time": "2018-10-28T12:59:27+00:00"
+        },
         {
             "name": "vlucas/phpdotenv",
             "version": "v2.5.1",
@@ -59,7 +84,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "alpha",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
